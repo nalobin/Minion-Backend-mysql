@@ -693,12 +693,12 @@ __DATA__
 -- 1 up
 create table if not exists minion_jobs (
 		`id`       serial not null primary key,
-		`args`     blob not null,
+		`args`     mediumblob not null,
 		`created`  timestamp not null,
 		`delayed`  timestamp not null,
 		`finished` timestamp,
 		`priority` int not null,
-		`result`   blob,
+		`result`   mediumblob,
 		`retried`  timestamp,
 		`retries`  int not null default 0,
 		`started`  timestamp,
